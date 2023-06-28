@@ -28,6 +28,8 @@ def train_spacy(data, iterations):
         print(losses)
     return nlp
 
+#This function is called by the optimizer to train the model
+
 TRAIN_DATA = load_data("data/train_data.json")
 nlp = train_spacy(TRAIN_DATA, 30)
 nlp.to_disk("rad_ner_models")
